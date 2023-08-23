@@ -8,19 +8,21 @@
   display: flex;
   flex-wrap: wrap;
   flex: auto;
-  height: 400px;
-  width: 400px;
+  height: 600px;
+  width: 600px;
   border: 1px solid black;
   margin: 40px auto;
 }
 
 .grid {
   box-sizing: border-box;
-  width: 6.25%;
-  height: 6.25%;
-  border: 1px solid rgb(66, 65, 65);
 }
 
 .painted-grid {
   background-color: rgb(66, 65, 65);
+}
+
+button {
+  width: 80px;
+  height: 20px;
 }
