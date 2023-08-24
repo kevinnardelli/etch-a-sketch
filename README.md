@@ -31,6 +31,10 @@ Kevin Nardelli
 ## Version History
 
 <ul>
+<li>0.3</li>
+  <ul>
+  <li>Add Clear Button</li>
+  </ul>
 <li>0.2</li>
   <ul>
   <li>Add Customizable Grid Size</li>

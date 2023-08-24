@@ -10,12 +10,13 @@
   flex: auto;
   height: 600px;
   width: 600px;
-  border: 1px solid black;
+  border: 1px solid rgb(0, 0, 0);
   margin: 40px auto;
 }
 
 .grid {
   box-sizing: border-box;
+  border: 1px solid rgb(220, 220, 220);
 }
 
 .painted-grid {
