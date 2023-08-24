@@ -31,6 +31,10 @@ Kevin Nardelli
 ## Version History
 
 <ul>
+<li>0.4</li>
+  <ul>
+  <li>Add Rainbow Mode</li>
+  </ul>
 <li>0.3</li>
   <ul>
   <li>Add Clear Button</li>

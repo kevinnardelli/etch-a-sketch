@@ -4,11 +4,20 @@ container.classList.add('container')
 const body = document.querySelector('body')
 body.appendChild(container)
 
-const numberOfGridsButton = document.querySelector('#number-of-grids')
-numberOfGridsButton.addEventListener('click', setGrid)
+const setGridButton = document.querySelector('#number-of-grids')
+setGridButton.addEventListener('click', setGrid)
 
-const clearButton = document.getElementById('clear')
-clearButton.addEventListener('click', clearGrid)
+const clearGridButton = document.getElementById('clear')
+clearGridButton.addEventListener('click', clearGrid)
+
+const blackAndWhiteButton = document.getElementById('black-and-white')
+blackAndWhiteButton.addEventListener('click', toBWMode)
+
+const rainbowButton = document.getElementById('rainbow')
+rainbowButton.addEventListener('click', toRainbowMode)
+
+const eraserButton = document.getElementById('eraser')
+eraserButton.addEventListener('click', toEraserMode)
 
 let grids = []
 
@@ -34,24 +43,41 @@ function setGrid() {
     height: ${(1/numberOfGrids)*100}%`)
     container.appendChild(grids[i])
   }
-
-  enableGrid()
 }
 
 function clearGrid() {
   if(grids.length > 0) {
     grids.forEach( (grid) => {
-      grid.classList.remove('painted-grid')
+      grid.style.backgroundColor = 'rgb(255, 255, 255)'
     })
-
-    enableGrid()
   }
 }
 
-function enableGrid() {
+function toBWMode() {
   grids.forEach( (grid) => {
     grid.addEventListener('mouseover', () => {
-      grid.classList.add('painted-grid')
+      grid.style.backgroundColor = 'rgb(0, 0, 0)'
     })
   })
 }
+
+function toRainbowMode() {
+  let randomizeValue = () => Math.floor(Math.random() * 255);
+  grids.forEach( (grid) => {
+    grid.addEventListener('mouseover', () => {
+      grid.style.backgroundColor = 
+      `rgb(${randomizeValue()}, ${randomizeValue()}, ${randomizeValue()})`
+    })
+  })
+}
+
+function toEraserMode() {
+  grids.forEach( (grid) => {
+    grid.addEventListener('mouseover', () => {
+      grid.style.backgroundColor = 'rgb(255, 255, 255)'
+    })
+  })
+}
+
+
+
