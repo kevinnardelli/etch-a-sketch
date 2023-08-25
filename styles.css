@@ -3,27 +3,68 @@
   padding: 0;
 }
 
+body {
+  display: flex;
+  flex: auto;
+  background-color: rgb(72, 67, 67);
+  gap: 40px;
+  padding: 40px;
+  width: 100%;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+#grid-div {
+  width: 550px;
+  height: 550px;
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: cornflowerblue;
+  border-radius: 5px;
+}
+
 .container {
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
   flex: auto;
-  height: 600px;
-  width: 600px;
-  border: 1px solid rgb(0, 0, 0);
+  height: 500px;
+  width: 500px;
+  border: 2px solid rgb(0, 0, 0);
   margin: 40px auto;
+  background-color: rgb(255, 255, 255);
 }
 
 .grid {
   box-sizing: border-box;
   border: 1px solid rgb(220, 220, 220);
+  background-color: rgb(255, 255, 255);
 }
 
-.painted-grid {
-  background-color: rgb(66, 65, 65);
+#button-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border: 2px solid black;
+  width: 25%;
+  align-items: center;
+  background-color: darkslateblue;
+  border-radius: 5px;
 }
 
-button {
-  width: 80px;
-  height: 40px;
+button, .pressed-button {
+  width: 200px;
+  height: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
+  border: 2px solid black;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: large;
+}
+
+.pressed-button {
+  box-shadow: 0 0 0 4px rgb(40, 40, 40);
 }
