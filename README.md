@@ -31,6 +31,10 @@ Kevin Nardelli
 ## Version History
 
 <ul>
+<li>1.1</li>
+  <ul>
+    <li>Improve "Set Grid!" and "Clear Grid!" buttons interaction</li>
+  </ul>
 <li>1.0</li>
   <ul>
     <li>Add Shader Mode</li>
