@@ -79,7 +79,7 @@ button, .pressed-button {
 }
 
 .pressed-button {
-  box-shadow: 0 0 0 4px hsl(0, 0%, 16%);
+  box-shadow: 0 0 0 4px hsl(219, 79%, 66%);
 }
 
 footer {
