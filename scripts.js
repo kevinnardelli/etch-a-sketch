@@ -32,8 +32,8 @@ function setGrid() {
   }
 
   grids = []
-  let numberOfGrids
   
+  let numberOfGrids
   do {
     numberOfGrids = 
     window.prompt('Insert number of square per side (max value: 100)')  
@@ -44,6 +44,7 @@ function setGrid() {
     grids[i].classList.add('grid')
     grids[i].setAttribute('style', `width: ${(1/numberOfGrids)*100}%; 
     height: ${(1/numberOfGrids)*100}%`)
+    grids[i].style.backgroundColor = "hsl(0, 0%, 100%)"
     container.appendChild(grids[i])
   }
 }
@@ -51,7 +52,7 @@ function setGrid() {
 function clearGrid() {
   if(grids.length > 0) {
     grids.forEach( (grid) => {
-      grid.style.backgroundColor = 'rgb(255 255 255)'
+      grid.style.backgroundColor = 'hsl(0, 0%, 100%)'
     })
   }
 }
@@ -75,20 +76,33 @@ function toRainbowMode() {
 }
 
 function toDarkeningMode() {
-  
+  removePressedButton()
+  grids.forEach( (grid) => {
+    let interactionCount = 10
+    grid.addEventListener('mouseover', () => {
+      interactionCount--;
+      if (interactionCount < 0) {
+        interactionCount = 0;
+      }
+      const darkness = (interactionCount / 10) * 100;
+      const color = `hsl(0, 0%, ${darkness}%)`;
+      grid.style.backgroundColor = color;
+    })
+  })
+  pressedButton(2) 
 }
 
 function toEraserMode() {
   removePressedButton()
-  setEventColor(255, 255, 255)
+  setEventColor(0, 0, 100)
   pressedButton(3)
 }
 
 
-function setEventColor(r, g, b) {
+function setEventColor(h, s, l) {
   grids.forEach( (grid) => {
     grid.addEventListener('mouseover', () => {
-      grid.style.backgroundColor = `rgb(${r}, ${g}, ${b})`
+      grid.style.backgroundColor = `hsl(${h}, ${s}%, ${l}%)`
     })
   })
 }

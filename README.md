@@ -4,7 +4,7 @@ A browser version of an Etch-A-Sketch for The Odin Project Foundations course.
 
 ## Description
 
-This project is created to apply the knowledge of DOM manipulation and arrays learned in The Odin Project Foundations course. This is a browser version of the Etch-A-Sketch toy, which currently has features to customize the number of cells per side, color cells black, a mode to paint cells with random colors and an eraser mode. To use it, simply select the number of cells per side and the mode you want and hover the mouse over the grid.
+This project is created to apply the knowledge of DOM manipulation and arrays learned in The Odin Project Foundations course. This is a browser version of the Etch-A-Sketch toy, which currently has features to customize the number of cells per side, color cells black, a mode to paint cells with random colors, a shader mode and an eraser mode. To use it, simply select the number of cells per side and the mode you want and hover the mouse over the grid.
 
 ## Getting Started
 
@@ -31,25 +31,30 @@ Kevin Nardelli
 ## Version History
 
 <ul>
+<li>1.0</li>
+  <ul>
+    <li>Add Shader Mode</li>
+    <li>Improve User Interface</li>
+  </ul>
 <li>0.5</li>
   <ul>
-  <li>Improve User Interface</li>
+    <li>Improve User Interface</li>
   </ul>
 <li>0.4</li>
   <ul>
-  <li>Add Rainbow Mode</li>
+    <li>Add Rainbow Mode</li>
   </ul>
 <li>0.3</li>
   <ul>
-  <li>Add Clear Button</li>
+    <li>Add Clear Button</li>
   </ul>
 <li>0.2</li>
   <ul>
-  <li>Add Customizable Grid Size</li>
+    <li>Add Customizable Grid Size</li>
   </ul>
 <li>0.1</li>
   <ul>
-  <li>Initial Release</li>
+    <li>Initial Release</li>
   </ul>
 </ul>
 

@@ -3,10 +3,13 @@
   padding: 0;
 }
 
-body {
+body  {
+  background-color: hsl(0, 4%, 27%);
+}
+
+#main {
   display: flex;
   flex: auto;
-  background-color: rgb(72, 67, 67);
   gap: 40px;
   padding: 40px;
   width: 100%;
@@ -14,14 +17,24 @@ body {
   box-sizing: border-box;
 }
 
+h1 {
+  color: hsl(60, 100%, 94%);
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: -10px;
+  font-size: 48px;
+  font-family: fantasy;
+}
+
 #grid-div {
   width: 550px;
   height: 550px;
-  border: 2px solid black;
+  border: 2px solid hsl(0, 0%, 0%);
   display: flex;
+  flex-direction: column;
   align-items: center;
   padding: 20px 50px;
-  background-color: cornflowerblue;
+  background-color: hsl(219, 79%, 66%);
   border-radius: 5px;
 }
 
@@ -30,17 +43,17 @@ body {
   display: flex;
   flex-wrap: wrap;
   flex: auto;
-  height: 500px;
-  width: 500px;
-  border: 2px solid rgb(0, 0, 0);
-  margin: 40px auto;
-  background-color: rgb(255, 255, 255);
+  height: 528px;
+  width: 504px;
+  border: 2px solid hsl(0, 0%, 0%);
+  margin: 23px auto;
+  background-color: hsl(0, 0%, 100%);
 }
 
 .grid {
   box-sizing: border-box;
-  border: 1px solid rgb(220, 220, 220);
-  background-color: rgb(255, 255, 255);
+  border: 1px solid hsl(0, 0%, 86%);
+  background-color: hsl(0, 0%, 100%);
 }
 
 #button-container {
@@ -50,7 +63,7 @@ body {
   border: 2px solid black;
   width: 25%;
   align-items: center;
-  background-color: darkslateblue;
+  background-color: hsl(248, 39%, 39%);
   border-radius: 5px;
 }
 
@@ -66,5 +79,31 @@ button, .pressed-button {
 }
 
 .pressed-button {
-  box-shadow: 0 0 0 4px rgb(40, 40, 40);
+  box-shadow: 0 0 0 4px hsl(0, 0%, 16%);
+}
+
+footer {
+  display: flex;
+  background-color: hsl(0, 0%, 100%);
+  padding: 5px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid hsl(0, 0%, 0%);
+}
+
+footer p {
+  font-size: large;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: hsl(271, 76%, 53%);
 }
